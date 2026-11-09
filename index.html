@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Stephen Kyle V. Laroco | Data Science &amp; Analytics</title>
+<meta name="color-scheme" content="light dark">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<meta name="description" content="Data science and analytics student at T.I.P. Manila. Looking for a data-related internship.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{color-scheme:light;--bg:#fff;--ink:#14171c;--muted:#5f6772;--rule:#e4e7eb;--accent:#1d3fbf;--font:'Hanken Grotesk',system-ui,-apple-system,'Segoe UI',sans-serif}
+:root[data-theme="dark"]{color-scheme:dark;--bg:#0f1217;--ink:#eceff3;--muted:#9aa3af;--rule:#262c35;--accent:#8aa4ff}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]){color-scheme:dark;--bg:#0f1217;--ink:#eceff3;--muted:#9aa3af;--rule:#262c35;--accent:#8aa4ff}}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;transition:background .2s,color .2s;background:var(--bg);color:var(--ink);font-family:var(--font);font-size:17px;line-height:1.65;
+  padding:env(safe-area-inset-top,0px) 0 env(safe-area-inset-bottom,0px)}
+a{color:inherit;text-decoration-color:var(--rule);text-underline-offset:4px;text-decoration-thickness:1.5px}
+a:hover{text-decoration-color:var(--accent);color:var(--accent)}
+h1,h2,h3{margin:0;line-height:1.15;font-weight:600;letter-spacing:-.02em}
+p{margin:0 0 1em}
+.w{max-width:760px;margin:0 auto;padding:0 clamp(20px,5vw,32px)}
+
+header.top{padding:28px 0}
+header.top .w{display:flex;justify-content:space-between;align-items:center;gap:16px}
+.brand{font-weight:600;text-decoration:none}
+nav{display:flex;gap:22px;font-size:.95rem;color:var(--muted)}
+nav a{text-decoration:none}
+nav a:hover{color:var(--ink)}
+nav{align-items:center}
+.theme{font:inherit;font-size:.9rem;color:var(--ink);background:none;border:1px solid var(--rule);border-radius:999px;padding:5px 14px;cursor:pointer}
+.theme:hover{border-color:var(--accent);color:var(--accent)}
+@media(max-width:520px){nav .opt{display:none}}
+
+.hero{padding:clamp(48px,10vw,112px) 0 clamp(40px,7vw,72px)}
+h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:700;letter-spacing:-.035em;max-width:16ch;margin-bottom:22px}
+.lede{font-size:1.2rem;color:var(--muted);max-width:34em;margin-bottom:28px}
+.lede strong{color:var(--ink);font-weight:600}
+.row{display:flex;flex-wrap:wrap;gap:12px 24px;align-items:center}
+.btn{display:inline-block;background:var(--ink);color:var(--bg);text-decoration:none;font-weight:600;padding:12px 22px;border-radius:8px}
+.btn:hover{background:var(--accent);color:var(--bg)}
+.plain{font-weight:500}
+
+.intro-grid{display:grid;grid-template-columns:1fr 200px;gap:clamp(24px,5vw,56px);align-items:center}
+.portrait{margin:0}
+.portrait img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:cover;border-radius:24px;border:1px solid var(--rule);background:var(--rule)}
+@media(max-width:700px){.intro-grid{grid-template-columns:1fr}.portrait{order:-1;width:112px}}
+.moment{margin:0 0 32px}
+.moment img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--rule)}
+.moment figcaption{color:var(--muted);font-size:.9rem;margin-top:10px}
+section{padding:clamp(40px,7vw,72px) 0;border-top:1px solid var(--rule)}
+h2{font-size:1.5rem;margin-bottom:8px}
+.intro{color:var(--muted);margin-bottom:24px}
+
+/* projects */
+details{border-bottom:1px solid var(--rule)}
+details:first-of-type{border-top:1px solid var(--rule)}
+summary{list-style:none;cursor:pointer;padding:18px 0;display:grid;grid-template-columns:1fr auto;gap:4px 20px;align-items:baseline}
+summary::-webkit-details-marker{display:none}
+summary h3{font-size:1.08rem;font-weight:600;letter-spacing:-.01em}
+summary:hover h3{color:var(--accent)}
+.type{color:var(--muted);font-size:.9rem;text-align:right}
+@media(max-width:560px){summary{grid-template-columns:1fr}.type{text-align:left}}
+.body{padding:0 0 26px;display:grid;gap:14px;max-width:62ch}
+.body p{margin:0;font-size:.98rem}
+.body b{display:block;font-size:.85rem;color:var(--accent);font-weight:600}
+details[open] summary h3{color:var(--accent)}
+.live .type{color:var(--accent);font-weight:500}
+
+/* lists */
+.item{padding:16px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1fr auto;gap:2px 20px}
+.item:first-of-type{border-top:1px solid var(--rule)}
+.item h3{font-size:1.02rem}
+.item .d{color:var(--muted);font-size:.9rem;text-align:right}
+.item p{grid-column:1/-1;margin:2px 0 0;color:var(--muted);font-size:.96rem}
+@media(max-width:560px){.item{grid-template-columns:1fr}.item .d{text-align:left;order:2}}
+.win{display:grid;grid-template-columns:auto 1fr;gap:20px;align-items:baseline}
+.win .big{font-size:3rem;font-weight:700;letter-spacing:-.05em;color:var(--accent);line-height:1}
+.win h3{font-size:1.1rem;margin-bottom:4px}
+.win p{margin:0;color:var(--muted)}
+
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:20px 32px;margin:24px 0 0}
+.facts div{border-top:1px solid var(--rule);padding-top:10px}
+.facts dt{color:var(--muted);font-size:.85rem}
+.facts dd{margin:0;font-weight:500}
+
+.kit{display:grid;grid-template-columns:150px 1fr;gap:0;margin-top:20px}
+.kit dt,.kit dd{margin:0;padding:12px 0;border-top:1px solid var(--rule)}
+.kit dt{color:var(--muted)}
+@media(max-width:520px){.kit{grid-template-columns:1fr}.kit dt{padding-bottom:0;border-bottom:0}.kit dd{border-top:0;padding-top:2px}}
+
+footer{padding:32px 0 48px;color:var(--muted);font-size:.88rem;border-top:1px solid var(--rule)}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="w">
+  <a class="brand" href="#">Stephen Kyle Laroco</a>
+  <nav><a class="opt" href="#work">Work</a><a class="opt" href="#experience">Experience</a><a href="#contact">Contact</a><button class="theme" id="theme" type="button" aria-label="Switch color theme">Dark mode</button></nav>
+</div></header>
+
+<main>
+<div class="w hero">
+  <div class="intro-grid">
+  <div>
+  <h1>Data science student who turns data into decisions.</h1>
+  <p class="lede">Fourth-year Data Science and Analytics student at T.I.P. Manila, building forecasts, models and dashboards. <strong>Looking for a data-related internship.</strong> <!-- TODO: add availability (start date, hours per week, remote or hybrid) --></p>
+  <div class="row">
+    <!-- TODO: save your resume next to this file as resume.pdf -->
+    <a class="btn" href="resume.pdf">Download resume</a>
+    <a class="plain" href="#work">See my projects</a>
+    <a class="plain" href="#contact">Contact</a>
+  </div>
+  </div>
+  <figure class="portrait"><img src="images/stephen-laroco.jpg" width="480" height="480" alt="Portrait of Stephen Kyle Laroco in a black suit and tie"></figure>
+  </div>
+  <dl class="facts">
+    <div><dt>Studying</dt><dd>BS Data Science &amp; Analytics</dd></div>
+    <div><dt>Standing</dt><dd>4th year, GWA 1.95 (1.0 is highest)</dd></div>
+    <div><dt>Based in</dt><dd>Cainta, Rizal, Philippines</dd></div>
+  </dl>
+</div>
+
+<section id="work"><div class="w">
+  <h2>Selected projects</h2>
+  <p class="intro">Each one started with a question someone needed answered. Open a project for the method and result.</p>
+
+  <details open>
+    <summary><h3>Climate-urban vulnerability index for five Philippine cities</h3><span class="type">Climate and urban analytics</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>Which Philippine cities are most vulnerable to climate hazards, and do the rankings hold up under different assumptions?</p></div>
+      <div><b>Method</b><p>A Hazard-Exposure-Poverty Gap index built from PAGASA, PSA and NDRRMC data, using min-max normalization and equal-weighted scoring, with sensitivity analysis on alternative weights. Aligned with SDG 11 and SDG 13.</p></div>
+      <div><b>Result</b><p>A what-if simulator and an interactive dashboard (the Ligtas resident app and a Command Center) to help local governments prioritize resilience investment. Shortlisted as a national finalist in ASEAN Data Science Explorers 2026.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Forecasting senior high school enrollment for DepEd</h3><span class="type">Forecasting</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>How many classrooms and teachers will NCR senior high schools need over the next three years?</p></div>
+      <div><b>Method</b><p>Facebook Prophet on historical NCR enrollment, inside a PHP and Python system with data validation, interactive charts and CSV/PDF reports.</p></div>
+      <div><b>Result</b><p>Reported accuracy of 80% or higher (MAPE of 20% or lower). The forecast converts directly into classroom and teacher requirements.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Machine learning on school facilities and student motivation</h3><span class="type">Classification, clustering</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>What shapes student motivation, and which model classifies it best?</p></div>
+      <div><b>Method</b><p>Decision Tree, Random Forest and Naive Bayes compared against K-Means, with PCA for 2D and 3D cluster views.</p></div>
+      <div><b>Result</b><p>Random Forest and Decision Tree reached 100% accuracy on this dataset. That result is specific to this data, not a general claim.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Global retail performance and profitability</h3><span class="type">Business intelligence</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>Which business segments are underperforming, and why?</p></div>
+      <div><b>Method</b><p>Power BI analysis of more than 51,000 retail records.</p></div>
+      <div><b>Result</b><p>An interactive profit-by-region dashboard showing how pricing, discounts and shipping costs affect margin.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Customer segmentation for high-end products</h3><span class="type">Data mining</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>Which customers should a high-end product target?</p></div>
+      <div><b>Method</b><p>SQL data warehousing on AdventureWorksDW2019, time-based feature engineering, Python and Power BI.</p></div>
+      <div><b>Result</b><p>Regional and customer-level sales trends to guide targeting.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>Factors affecting student academic performance</h3><span class="type">Statistical research</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>Which demographic and socioeconomic factors affect how students perform?</p></div>
+      <div><b>Method</b><p>Exploratory analysis, multiple linear regression, T-tests and ANOVA on 1,000 observations.</p></div>
+      <div><b>Result</b><p>A quantified effect for each factor, presented with correlation heatmaps and boxplots.</p></div>
+    </div>
+  </details>
+
+  <details>
+    <summary><h3>School resource management system</h3><span class="type">Software engineering</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>How can a school department track and allocate shared resources reliably?</p></div>
+      <div><b>Method</b><p>Java with object-oriented design, custom data structures, role-based access and a Swing/AWT interface.</p></div>
+      <div><b>Result</b><p>Real-time inventory, transaction logging, check-in and check-out, and automated reports. Logging every transaction is what makes later analysis possible.</p></div>
+    </div>
+  </details>
+
+  <details class="live">
+    <summary><h3>HR chatbot for employee support (capstone)</h3><span class="type">In progress since July 2026</span></summary>
+    <div class="body">
+      <div><b>Question</b><p>How can employees get accurate answers from HR resources without waiting on a person?</p></div>
+      <div><b>Method</b><p>Retrieval-augmented generation over company HR documents using a local LLM, with Python, FastAPI and PostgreSQL.</p></div>
+      <div><b>Status</b><p>Being built with Information Technology Group, Inc. around their real requirements. Not a finished commercial product.</p></div>
+    </div>
+  </details>
+</div></section>
+
+<section id="experience"><div class="w">
+  <h2>Recognition and leadership</h2>
+  <div class="win" style="margin:24px 0 32px">
+    <div class="big">1st</div>
+    <div><h3>Data &amp; AI Inclusion Hackathon, Grundfos × T.I.P. (February 2026)</h3>
+    <p>Data analyst on the champion team. I cleaned and explored the data, then turned the findings into a solution for local students.</p></div>
+  </div>
+  <figure class="moment">
+    <img src="images/speaking-tip-manila.jpg" width="1200" height="600" loading="lazy" alt="Stephen speaking at a podium during a data science talk at T.I.P. Manila">
+    <!-- TODO: add the event name and date to this caption -->
+    <figcaption>Presenting “Building the Foundation of Data Science and Analytics” at T.I.P. Manila.</figcaption>
+  </figure>
+  <!-- TODO: add numbers to each role (members recruited, attendees, events run) -->
+  <div class="item"><h3>National finalist (shortlisted), ASEAN Data Science Explorers 2026</h3><span class="d">Aug 2026 to present</span><p>Data analyst on a team that built a climate-urban vulnerability index and dashboard for five Philippine cities.</p></div>
+  <div class="item"><h3>Founding President, Collaborative Analytics and Data Science Society</h3><span class="d">Aug 2025 to present</span><p>Founded the organization and ran workshops that promote data literacy on campus.</p></div>
+  <div class="item"><h3>Digital Thumbprint Program Ambassador, Globe</h3><span class="d">Sep 2025 to present</span><p>Selected as one of the first ambassadors in the Philippines, promoting responsible digital citizenship among Filipino youth.</p></div>
+  <div class="item"><h3>Lead Data Analyst, AWS Cloud Clubs T.I.P. Manila</h3><span class="d">Feb 2024 to Jun 2026</span><p>Led planning of tech events, workshops and community initiatives.</p></div>
+  <div class="item"><h3>Vice President, I.C.O.N.S.</h3><span class="d">Aug 2025 to Jun 2026</span><p>Supported operations, technical events and student engagement.</p></div>
+  <div class="item"><h3>Treasurer, CCS Department Student Council</h3><span class="d">Sep 2024 to May 2025</span><p>Managed the council’s finances and reporting.</p></div>
+  <div class="item"><h3>Alpha Student Ambassador, Microsoft Learn</h3><span class="d">Apr to Nov 2024</span><p>Selected for the Alpha cohort and mentored fellow ambassadors.</p></div>
+</div></section>
+
+<section><div class="w">
+  <h2>Tools</h2>
+  <dl class="kit">
+    <dt>Programming</dt><dd>Python, R, Java, PHP</dd>
+    <dt>Data</dt><dd>SQL, PostgreSQL, Excel</dd>
+    <dt>Modeling</dt><dd>WEKA, Facebook Prophet, retrieval-augmented generation</dd>
+    <dt>Visualization</dt><dd>Power BI</dd>
+    <dt>Design and planning</dt><dd>Notion, Photoshop, Canva</dd>
+  </dl>
+</div></section>
+
+<section id="contact"><div class="w">
+  <h2>Contact</h2>
+  <p class="intro">I’m looking for a data-related internship. Email is the fastest way to reach me.</p>
+  <div class="row">
+    <a class="btn" href="mailto:skvlaroco@gmail.com">skvlaroco@gmail.com</a>
+    <a class="plain" href="https://www.linkedin.com/in/skvlaroco/" target="_blank" rel="noopener">LinkedIn</a>
+    <!-- TODO: add your GitHub link here -->
+    <a class="plain" href="resume.pdf">Resume</a>
+  </div>
+</div></section>
+</main>
+
+<footer><div class="w">© 2026 Stephen Kyle V. Laroco, T.I.P. Manila</div></footer>
+<script>
+(function(){
+  var root=document.documentElement,btn=document.getElementById('theme'),mq=window.matchMedia('(prefers-color-scheme: dark)');
+  function isDark(){var t=root.getAttribute('data-theme');return t?t==='dark':mq.matches}
+  function label(){btn.textContent=isDark()?'Light mode':'Dark mode'}
+  btn.addEventListener('click',function(){
+    var next=isDark()?'light':'dark';
+    root.setAttribute('data-theme',next);
+    try{localStorage.setItem('theme',next)}catch(e){}
+    label();
+  });
+  mq.addEventListener('change',label);
+  label();
+})();
+</script>
+</body>
+</html>
